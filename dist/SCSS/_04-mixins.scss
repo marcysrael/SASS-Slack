@@ -10,3 +10,8 @@
      object-fit: cover;
     }
     
+@mixin centerALL(){
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}

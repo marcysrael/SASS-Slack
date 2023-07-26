@@ -3,6 +3,7 @@
     position:relative;
     position:fixed;
     width:100%;
+    z-index: 999;
     .container{
         transition:.5s ease;
     }
@@ -28,7 +29,7 @@
             width:4rem;
         }
         h3{
-            color:$clr-dark;
+            color:$clr-light;
             font-size:3rem;
         }
         ul{
@@ -78,7 +79,7 @@
             margin:0 3rem;
             li{
                 a{
-                    fort-size:1.5rem;
+                    font-size:1.5rem;
                 }
             }
             &.open{
