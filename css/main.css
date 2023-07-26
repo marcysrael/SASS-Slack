@@ -37,7 +37,7 @@ body {
   width: 100%;
 }
 .header .container {
-  transition: 1s ease;
+  transition: 0.5s ease;
 }
 .header.white {
   background: transparent;
@@ -45,8 +45,8 @@ body {
 .header.white .container {
   background: blue;
   border-radius: 3rem;
-  margin-top: 5rem;
-  transition: 2s ease;
+  margin-top: 2rem;
+  transition: 0.5s ease;
 }
 .header__wrapper {
   display: flex;

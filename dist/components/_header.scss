@@ -4,15 +4,15 @@
     position:fixed;
     width:100%;
     .container{
-        transition:1s ease;
+        transition:.5s ease;
     }
     &.white{
         background:transparent;
         .container{
             background:blue;
             border-radius:3rem;
-            margin-top:5rem;
-            transition:2s ease;
+            margin-top:2rem;
+            transition:.5s ease;
         }
     }
     &__wrapper{
@@ -189,3 +189,4 @@
     }
     }
 }
+
