@@ -1,9 +1,6 @@
 .banner{
     background:$clr-primary;
     padding-top:10rem;
-    .container{
-        padding-bottom:0rem;
-    }
     &__wrapper{
         display:flex;
         align-items:center;
@@ -56,9 +53,6 @@
         }   
     }
     @include mediaQuery($break-lg){
-    .container{
-        padding-bottom:5rem;
-    }
         &__wrapper{
                 display:grid;
                 grid-template-columns:2fr 2fr;
@@ -108,7 +102,6 @@
 .comp{
             background:$clr-fwhite;
             padding-top:3rem;
-            padding-bottom:5rem;
         &__wrapper{
             display:grid;
             align-items:center;
@@ -130,7 +123,81 @@
             flex-wrap:wrap;
             img{
             width:8.5rem;
-        
+            }
+            img:nth-child(5){
+                width:10rem;
+            }
+            img:nth-child(4){
+                width:8rem;
+            }
+            img:last-child{
+                width:8rem;
             }
         }
+        @include mediaQuery($break-lg){
+            &__wrapper{
+                display:grid;
+                align-items:center;
+            }
+            &__img{
+                display:flex;
+                max-width:100%;
+                gap:8rem;
+                img{
+                width:10rem;
+            }
+            img:nth-child(5){
+                width:20rem;
+            }
+            img:nth-child(4){
+                width:8rem;
+            }
+            img:last-child{
+                width:8rem;
+            }
+            }
+            
+        }
+}
+
+.offers{
+    background:$clr-fwhite;
+    padding-top:3rem;
+    padding-bottom:3rem;
+        &__wrapper{
+            display:grid;
+            align-items:center;
+        }
+        &__items:not(:first-child){
+            margin-top:10rem;
+        }
+        &__text{
+            h1{
+                font-size:3rem;
+                margin:2rem 0;
+            }
+            p{
+                font-size:1.8rem;
+                margin-bottom:2rem;
+            }
+            a{
+                color:#1264A9;
+                font-size:1.8rem;
+                i{
+                    margin-left: 2rem;
+                }
+            }
+        }
+        &__items:nth-child(odd){
+                video{
+                    @include imgFit(95%, 90%);
+                    transform:translateX(-10rem);
+                }
+        }
+        &__items:nth-child(even){
+                 video{
+                     @include imgFit(95%, 90%);
+                     transform:translateX(3.5rem);
+                 }
+         }
 }
