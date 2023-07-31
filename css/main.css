@@ -1086,7 +1086,6 @@ body {
   background: hsl(0, 0%, 100%);
   padding-top: 3rem;
   padding-bottom: 3rem;
-  border: 1px solid #000000;
 }
 .enter__wrapper {
   display: grid;
@@ -1103,11 +1102,15 @@ body {
   margin: 2rem 0;
   line-height: 1;
 }
-.enter__text p:not(:enter__stats) {
+.enter__text p {
   font-size: 1.8rem;
   text-align: center;
 }
-.enter__text a {
+.enter__btn {
+  display: grid;
+  align-items: center;
+}
+.enter__btn a {
   text-align: center;
   margin: 1rem 0;
 }
@@ -1117,6 +1120,8 @@ body {
 }
 .enter__stats ul {
   align-items: center;
+  margin: 0 auto;
+  width: 100%;
 }
 .enter__stats ul li {
   align-items: center;
@@ -1132,6 +1137,125 @@ body {
   max-width: 50%;
   margin: 0 auto;
 }
+@media screen and (min-width: 940px) {
+  .enter {
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+  }
+  .enter__wrapper {
+    display: grid;
+    align-items: center;
+  }
+  .enter__text {
+    align-items: center;
+    text-align: center;
+    margin: 2rem 0;
+  }
+  .enter__text h1 {
+    font-size: 5.5rem;
+    font-weight: 700;
+  }
+  .enter__text p {
+    font-size: 2rem;
+  }
+  .enter__btn {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    gap: 1rem;
+  }
+  .enter__btn a {
+    padding: 1.8rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  .enter__stats {
+    padding-top: 4rem;
+  }
+  .enter__stats ul {
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    justify-content: space-evenly;
+    display: flex;
+  }
+  .enter__stats ul li {
+    align-items: center;
+    margin: 0 auto;
+  }
+  .enter__stats ul li h2 {
+    font-size: 6.5rem;
+    font-weight: 600;
+    text-align: justify;
+  }
+  .enter__stats ul li p {
+    text-align: left;
+    max-width: 70%;
+    margin: auto 0;
+    font-size: 1.5rem;
+  }
+}
+
+.work {
+  background-color: hsl(34, 42%, 93%);
+}
+.work .slider__item {
+  width: 25rem;
+  height: 40rem;
+  padding: 1rem;
+  background-color: hsl(0, 0%, 100%);
+  margin: 0 auto;
+}
+.work .slider__item h5 {
+  font-size: 1.4rem;
+  font-weight: lighter;
+  padding-bottom: 2rem;
+}
+.work .slider__item img {
+  width: 100%;
+}
+.work .tns-controls, .work button[data-action=stop] {
+  display: none;
+}
+.work .tns-nav {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.work .tns-nav button {
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  background: hsl(0, 0%, 100%);
+  border-radius: 50%;
+  justify-content: center;
+  border: none;
+  transition: 0.5s ease-in-out;
+}
+.work .tns-nav button:hover {
+  background: hsl(293.51, 54.41%, 26.67%);
+}
+.work .tns-nav button.tns-nav-active {
+  background: hsl(293.51, 54.41%, 26.67%);
+}
+.work button:hover,
+.work button.tns-nav-active {
+  position: relative;
+  transition: 0.5s ease-in-out;
+  background: hsl(293.51, 54.41%, 26.67%);
+}
+.work button:hover::before,
+.work button.tns-nav-active:before {
+  content: "";
+  position: absolute;
+  padding: 1rem;
+  top: -0.5rem;
+  left: -0.5rem;
+  border-radius: 50%;
+  border: 1px dashed hsl(293.51, 54.41%, 26.67%);
+}
+
 .footer__left ul li {
   padding: 2rem 0;
   font-size: 1.4rem;
@@ -1147,12 +1271,13 @@ body {
   width: 100%;
   height: 100%;
   position: fixed;
-  background: blue;
+  background: #ffffff;
   top: auto;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 9999;
+  border: 1px solid #000000;
 }
 .footer__left .modal.active {
   display: block;
@@ -1171,4 +1296,20 @@ body {
     margin: 0 auto;
     bottom: 15rem;
   }
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  opacity: 0.75;
+}
+#overlay.active {
+  display: block;
 }/*# sourceMappingURL=main.css.map */

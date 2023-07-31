@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slack - Home</title>
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
     <script src="https://kit.fontawesome.com/0afb805cb9.js" crossorigin="anonymous"></script>
+    
 </head>
 <body>
+  <div id="overlay"></div>
   <header class="header">
     <div class="container">
      <div class="header__wrapper">
@@ -140,8 +143,11 @@
         <div class="enter__text">
           <h1>Teams large and small rely on Slack</h1>
           <p>Slack securely scales up to support collaboration at the world's biggest companies.</p>
+        </div>
+          <div class="enter__btn">
           <a href="" class="btn bg--primary">MEET SLACK FOR ENTERPRISE</a>
           <a href="" class="btn bg--light">TALK TO SALES</a>
+        </div>
         <div class="enter__stats">
           <ul>
           <li>
@@ -158,11 +164,79 @@
           </li>
         </ul>
         </div>
-        </div>
       </div>
     </div>
   </section>
-<footer class="footer">
+
+<section class="stories">
+  <div class="container">
+    <div class="stories__wrapper"></div>
+  </div>
+</section>
+
+<section class="work">
+  <div class="container">
+    <div class="work__wrapper">
+      <h3>Take a deeper dive into a new way to work</h3>
+      <div class="slider">
+        <div class="card">
+        <div class="slider__item">
+          <img src="../dist/img/promo-boost-productivity2x.jpg" alt="">
+          <div class="slider__content">
+            <h5>Customer Story</h5>
+            <h3>The next big thing.</h3>
+            <div class="slider__actions">
+              <a href="#">Read more</a>
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="card">
+        <div class="slider__item">
+          <img src="../dist/img/promo-boost-productivity2x.jpg" alt="">
+          <div class="slider__content">
+            <h5>Customer Story</h5>
+            <h3>The next big thing.</h3>
+            <div class="slider__actions">
+              <a href="#">Read more</a>
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="card">
+        <div class="slider__item">
+          <img src="../dist/img/promo-boost-productivity2x.jpg" alt="">
+          <div class="slider__content">
+            <h5>Customer Story</h5>
+            <h3>The next big thing.</h3>
+            <div class="slider__actions">
+              <a href="#">Read more</a>
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="card">
+        <div class="slider__item">
+          <img src="../dist/img/promo-boost-productivity2x.jpg" alt="">
+          <div class="slider__content">
+            <h5>Customer Story</h5>
+            <h3>The next big thing.</h3>
+            <div class="slider__actions">
+              <a href="#">Read more</a>
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <footer class="footer">
   <div class="container">
     <div class="footer__wrapper">
       <div class="footer__left">
@@ -175,7 +249,7 @@
           <li><a href="#">Contact Us</a></li>
           <li>
             <a class="region" href="javascript:void(0)">Change Region</a>
-            <div class="modal" onfocusout="closeModalHandler">
+            <div class="modal">
               <button id="closeModal">X</button>
               <h2>Change Region</h2>
             </div>
@@ -188,7 +262,7 @@
     </div>
   </div>
 </footer>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
   <script src="../JS/script.js"></script>
 </body>
 </html>
