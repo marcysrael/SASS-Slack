@@ -810,6 +810,35 @@ body {
   border: 1px solid hsl(293.51, 54.41%, 26.67%);
   transition: 0.5s ease;
 }
+.btn.bg--dprimary {
+  background: hsl(300, 62.16%, 14.51%);
+  color: hsl(0, 0%, 100%);
+  border: 1px solid hsl(0, 0%, 100%);
+}
+.btn.bg--dprimary::before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  background-color: hsl(0, 0%, 100%);
+  transform-origin: left;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s ease;
+  border-radius: 1rem;
+  z-index: -1;
+}
+.btn.bg--dprimary:hover::before {
+  width: 100%;
+  transition: 0.5s ease;
+}
+.btn.bg--dprimary:hover {
+  color: hsl(300, 62.16%, 14.51%);
+  z-index: 999;
+  border: 1px solid hsl(300, 62.16%, 14.51%);
+  transition: 0.5s ease;
+}
 .btn.bg--light {
   background: hsl(0, 0%, 100%);
   color: hsl(293.51, 54.41%, 26.67%);
@@ -834,6 +863,35 @@ body {
   transition: 0.5s ease;
 }
 .btn.bg--light:hover {
+  color: hsl(0, 0%, 100%);
+  z-index: 999;
+  border: 1px solid hsl(0, 0%, 100%);
+  transition: 0.5s ease;
+}
+.btn.bg--dlight {
+  background: hsl(0, 0%, 100%);
+  color: hsl(300, 62.16%, 14.51%);
+  border: 1px solid hsl(300, 62.16%, 14.51%);
+}
+.btn.bg--dlight::before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  background-color: hsl(300, 62.16%, 14.51%);
+  transform-origin: left;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s ease;
+  border-radius: 1rem;
+  z-index: -1;
+}
+.btn.bg--dlight:hover::before {
+  width: 100%;
+  transition: 0.5s ease;
+}
+.btn.bg--dlight:hover {
   color: hsl(0, 0%, 100%);
   z-index: 999;
   border: 1px solid hsl(0, 0%, 100%);
@@ -1022,6 +1080,7 @@ body {
 }
 
 .offers {
+  display: none;
   background: hsl(34, 42%, 93%);
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -1193,6 +1252,140 @@ body {
     max-width: 70%;
     margin: auto 0;
     font-size: 1.5rem;
+  }
+}
+
+.stories {
+  background: #ffffff;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.stories__wrapper {
+  align-items: center;
+  display: grid;
+  margin: 0 auto;
+}
+.stories__video {
+  padding-bottom: 3rem;
+}
+.stories__video video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: translateX(-1.5rem);
+  border-top-right-radius: 20rem;
+  border-bottom-right-radius: 20rem;
+}
+.stories__text {
+  align-items: center;
+}
+.stories__text h3 {
+  font-size: 2.5rem;
+  font-weight: normal;
+  font-style: italic;
+  margin: 2.5rem 0;
+}
+.stories__text h4 {
+  font-size: 1.8rem;
+}
+.stories__text h6 {
+  font-size: 1.8rem;
+  font-weight: normal;
+  margin-bottom: 2rem;
+}
+.stories__text a {
+  font-size: 1.8rem;
+}
+.stories__text a i {
+  padding-left: 1rem;
+  font-size: 1.8rem;
+}
+.stories__stats {
+  align-items: center;
+  margin-top: 5rem;
+}
+.stories__stats p {
+  text-align: center;
+  color: #696969;
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 940px) {
+  .stories__wrapper {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    align-items: center;
+    gap: 5rem;
+  }
+  .stories__text {
+    align-items: center;
+    height: 90%;
+    margin: 0 auto;
+  }
+  .stories__text h4 {
+    font-size: 1.5rem;
+  }
+  .stories__text h6 {
+    font-size: 1.5rem;
+  }
+  .stories__video video {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+.accomp {
+  background-color: hsl(300, 62.16%, 14.51%);
+  -webkit-clip-path: ellipse(105% 100% at center top);
+          clip-path: ellipse(105% 100% at center top);
+  padding-top: 3rem;
+  padding-bottom: 6rem;
+}
+.accomp__wrapper {
+  align-items: center;
+  display: grid;
+}
+.accomp__text {
+  align-items: center;
+  margin: 2rem 0;
+}
+.accomp__text h1 {
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+  font-size: 3rem;
+  margin: 2rem 0;
+}
+.accomp__button {
+  display: grid;
+  align-items: center;
+  gap: 1.5rem;
+}
+.accomp__button a {
+  text-align: center;
+}
+@media screen and (min-width: 940px) {
+  .accomp {
+    -webkit-clip-path: ellipse(75% 100% at center top);
+            clip-path: ellipse(75% 100% at center top);
+    height: auto;
+    padding-top: 6rem;
+    min-height: 370px;
+  }
+  .accomp__text h1 {
+    font-size: 4.5rem;
+    margin-bottom: 4rem;
+  }
+  .accomp__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0 auto;
+  }
+  .accomp__button a {
+    width: 15%;
   }
 }
 
