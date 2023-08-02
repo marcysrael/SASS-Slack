@@ -460,6 +460,52 @@
     }
 }
 
+.columns{
+    background:$clr-light;
+    padding-top:5rem;
+    padding-bottom:5rem;
+    &__wrapper{
+        display:flex;
+        flex-direction:column;
+    }
+    &__logo{
+        margin:3rem 0;
+        }
+    &__context{
+        display:flex;
+        gap:1rem;
+    }
+    &__text{
+        margin:0 auto;
+        li{
+            margin:1rem 0;
+        }
+        a{
+            color:$clr-dark;
+            font-size:1.2rem;
+        }
+    }
+    @include mediaQuery($break-lg){
+        &__wrapper{
+            display:grid;
+            grid-template-columns:1fr 9fr;
+        }
+        &__logo{
+            margin-top:0;
+        }
+        &__text{
+            margin:0 auto;
+            li{
+                margin:1rem 0;
+            }
+            a{
+                color:$clr-dark;
+                font-size:1.5rem;
+            }
+        }
+    }
+}
+
 .work{
     background-color:$clr-fwhite;
     .slider__item{
@@ -518,5 +564,8 @@
       left: -.5rem;
       border-radius: 50%;
       border: 1px dashed $clr-primary;
+    }
+    &__wrapper{
+
     }
 }
